@@ -20,6 +20,7 @@ def predict(data: Features):
     features = np.array(data.features).reshape(1, -1)
     prediction = model.predict(features)
     return {"prediction": int(prediction[0])}
+
 @app.get("/")
 def root():
     return {"message": "Iris Classifier API is running!"}
